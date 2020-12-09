@@ -1,0 +1,89 @@
+- En el archivo 'CarnetPorPuntos.h' deben añadirse los
+campos necesarios para soportar las estructuras de datos
+requeridas por el TAD, así como todas las clases y definiciones
+adicionales que se consideren oportunas.
+
+- En el archivo 'CarnetPorPuntos.cpp' deben implementarse
+todos los métodos declarados en 'CarnetPorPuntos.h'.
+
+- En el archivo 'main.cpp' está el programa de prueba. 
+Este programa no debe modificarse. 
+Este programa lee y ejecuta una serie de acciones a realizar sobre un
+sistema de gestión de carnet por puntos.
+Las posibles órdenes son las siguientes:
+- nuevo DNI: Da de alta un nuevo conductor en el sistema. Imprime OK si 
+el alta tiene exito, o CONDUCTOR_YA_EXISTE en caso de que trate de darse
+de alta un conductor que ya existe.
+- quitar DNI PUNTOS: Quita puntos a un conductor. Imprime el número de
+puntos del conductor tras la operación, o CONDUCTOR_NO_EXISTE en caso de 
+que el conductor no esté dado de alta en el sistema.
+- recuperar DNI PUNTOS: Permite que un conductor recupere puntos. Imprime el 
+número de puntos del conductor tras la operación, o CONDUCTOR_NO_EXISTE en caso 
+de que el conductor no esté dado de alta en el sistema.
+- consultar DNI: Consulta el número de puntos de un conductor. Imprime dicho
+número, o CONDUCTOR_NO_EXISTE en caso de que el conductor no esté dado de
+alta en el sistema.
+- cuantos_con_puntos PUNTOS: Imprime el número de conductores que tienen
+el número de puntos indicado. Si PUNTOS no está entre 0 y 15, imprime
+PUNTOS_NO_VALIDOS.
+- lista_por_puntos PUNTOS: Imprime los DNIs de los conductores que 
+tienen los puntos indicados, ordenados por el momento de obtención de 
+dichos puntos (primero los que hace menos tiempo que los han obtenido). 
+Si PUNTOS no está entre 0 y 15, imprime PUNTOS_NO_VALIDOS.
+
+Ejemplo de entrada:
+===================
+nuevo 1234
+nuevo 1234
+consultar 1234
+consultar 1235
+nuevo 1235
+consultar 1235
+cuantos_con_puntos 15
+cuantos_con_puntos 8
+cuantos_con_puntos 16
+cuantos_con_puntos 15
+cuantos_con_puntos 14
+lista_por_puntos 15
+lista_por_puntos 16
+recuperar 1234 1
+cuantos_con_puntos 15
+lista_por_puntos 15
+quitar 1234 1
+cuantos_con_puntos 15
+cuantos_con_puntos 14
+lista_por_puntos 15
+lista_por_puntos 14
+recuperar 1234 10
+lista_por_puntos 15
+recuperar 1456 5
+quitar 1456 5
+
+Salida producida:
+=================
+OK
+CONDUCTOR_YA_EXISTE
+15
+CONDUCTOR_NO_EXISTE
+OK
+15
+2
+0
+PUNTOS_NO_VALIDOS
+2
+0
+1235 1234
+PUNTOS_NO_VALIDOS
+15
+2
+1235 1234
+14
+1
+1
+1235
+1234
+15
+1234 1235
+CONDUCTOR_NO_EXISTE
+CONDUCTOR_NO_EXISTE
+

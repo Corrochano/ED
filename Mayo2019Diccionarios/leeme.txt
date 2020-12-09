@@ -1,0 +1,177 @@
+Material proporcionado
+======================
+main.cpp: El programa principal que realiza la prueba del TAD
+a implementar. Dicho programa no debe modificarse
+
+SistemaVentas.h: Definición de la parte publica de la clase
+SistemaVentas. A esta definición deben añadirse los detalles
+de representación, en la parte privada. Así mismo, en este
+archivo podrán realizarse las definiciones auxiliares que
+se consideren oportunas.
+
+SistemaVentas.cpp. Aquí deben implementarse las operaciones del TAD.
+Aparte de implementar los distintos métodos, deberá indicarse
+y justificarse su complejidad en los comentarios que los preceden.
+En este archivo puede implementarse también todos aquellos métodos 
+auxiliares que se consideren oportunos. 
+
+
+Excepciones
+===========
+El TAD incluye varias operaciones parciales. Cuando se aplican
+sobre valores que están fueran de su dominio, deben levantar
+excepciones adecuadas. Más concretamente:
+- an_oferta levanta EErrorAltaProducto
+- pon_en_espera levanta EProductoNoExiste
+- cancela_espera levanta EProductoNoExiste
+- num_en_espera levanta EProductoNoExiste 
+- venta levanta EErrorVenta
+- primero_en_espera levanta  EErrorAccesoListaEspera 
+
+
+Formato de los archivos de entrada 
+==================================
+Cada línea contiene un comando para invocar una operación.
+Los comandos tienen el mismo nombre y propósito que las operaciones
+del TAD:
+
+an_oferta <producto> <unidades>
+pon_en_espera <cliente> <producto>
+cancela_espera <cliente> <producto>
+num_en_espera <producto>
+venta <producto> <unidades>
+primero_en_espera <producto>
+lista_ventas
+
+
+Formato de los archivos de salida
+=================================
+Para cada comando
+
+C
+
+se genera una línea en la salida con el siguiente formato
+
+<Resultado de ejecutar C>
+
+El resultado de ejecutar cada comando es como sigue:
+
+an_oferta: se imprime OK si todo ha ido bien; ERROR en otro caso.
+pon_en_espera: se imprime OK si todo ha ido bien; ERROR en otro caso.
+cancela_espera: se imprime OK si todo ha ido bien; ERROR en otro caso.
+num_en_espera: se imprime el número de clientes en espera si todo ha ido bien; ERROR en otro caso.
+venta: se imprime OK si todo ha ido bien; ERROR en otro caso.
+primero_en_espera: se imprime el nombre del primer cliente en espera si todo ha ido bien; ERROR en otro caso.
+lista_ventas: se imprime la lista de ventas en el formato /<producto_1>:<unidades_1>/..../<producto_n>:<unidades_n>/. 
+La lista vacía se imprime como /
+
+Ejemplo 1 de entrada
+====================
+an_oferta ipub 5
+pon_en_espera juan ipub
+pon_en_espera jose ipub
+cancela_espera juan ipub
+num_en_espera ipub
+primero_en_espera ipub
+venta ipub 3
+lista_ventas
+
+Salida producida para el ejemplo 1
+==================================
+OK
+OK
+OK
+OK
+1
+jose
+OK
+/ipub:3/
+
+
+Ejemplo 2 de entrada
+====================
+an_oferta ipub 5
+an_oferta ipub 4
+an_oferta xbos 0
+an_oferta xbos 1
+pon_en_espera jose ipub
+pon_en_espera juan ipub
+pon_en_espera lucas ipub
+pon_en_espera juan xbos
+pon_en_espera jose xbos
+pon_en_espera juan ipub
+pon_en_espera jose xbos
+lista_ventas
+primero_en_espera ipub
+primero_en_espera xbos
+num_en_espera ipub
+num_en_espera xbos
+cancela_espera juan ipub
+num_en_espera ipub
+primero_en_espera xbos
+venta ipub 3
+primero_en_espera ipub
+num_en_espera ipub
+venta ipub 10
+venta ipub 2
+venta ipub 1
+lista_ventas
+venta xbos 1
+venta xbos 1
+num_en_espera xbos
+num_en_espera ipub
+primero_en_espera xbos
+lista_ventas
+an_oferta ipub 2
+pon_en_espera jose ipub
+venta ipub 2
+lista_ventas
+pon_en_espera ana ipub
+pon_en_espera ana galasia
+primero_en_espera galasia
+num_en_espera galasia
+venta galasia 2
+
+Salida producida para el ejemplo 2
+==================================
+OK
+ERROR
+ERROR
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+/
+jose
+juan
+3
+2
+OK
+2
+juan
+OK
+lucas
+1
+ERROR
+OK
+ERROR
+/ipub:5/
+OK
+ERROR
+ERROR
+ERROR
+ERROR
+/ipub:5/xbos:1/
+OK
+OK
+OK
+/ipub:7/xbos:1/
+ERROR
+ERROR
+ERROR
+ERROR
+ERROR

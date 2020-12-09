@@ -1,0 +1,74 @@
+Material proporcionado
+======================
+main.cpp: El programa principal que realiza la prueba del TAD
+a implementar. Dicho programa no debe modificarse
+
+GestorSurtidores.h: Definición de la parte publica de la clase
+GestorSurtidores. A esta definición deben añadirse los detalles
+de representación, en la parte privada. Así mismo, en este
+archivo podrán realizarse las definiciones auxiliares que
+se consideren oportunas.
+
+GestorSurtidores.cpp. Aquí deben implementarse las operaciones del TAD.
+Aparte de implementar los distintos métodos, deberá indicarse
+y justificarse su complejidad en los comentarios que los preceden.
+En este archivo puede implementarse también todos aquellos métodos 
+auxiliares que se consideren oportunos. 
+
+
+Formato de los archivos de entrada 
+==================================
+Cada línea contiene un comando para invocar una operación.
+Los comandos tienen el mismo nombre y propósito que las operaciones
+del TAD:
+
+an_surtidor <surtidor>
+carga <surtidor> <tipo_combustible> <num_litros>
+pon_en_espera <vehiculo> <surtidor>
+vende <surtidor> <tipo_combustible> <num_litros>
+abandona <vehiculo>
+
+Formato de los archivos de salida
+=================================
+Para cada comando
+
+C
+
+se genera una línea en la salida con el siguiente formato
+
+C=><Resultado de ejecutar C>
+
+El resultado de ejecutar cada comando es como sigue:
+
+an_surtidor: se imprime OK si todo ha ido bien; SURTIDOR_DUPLICADO 
+             si el surtidor estaba duplicado.
+carga: se imprime OK si todo ha ido bien; SURTIDOR_NO_EXISTE si
+       el surtidor no existe.
+pon_en_espera: se imprime OK si todo ha ido bien; ERROR_PUESTA_ESPERA
+       en otro caso.
+vende: se imprime 
+       VEHICULO:<vehiculo>, QUEDA:<litros_que_quedan> 
+	   si todo ha ido bien; ERROR_VENTA en otro caso.
+abandona: se imprime OK	   
+
+Ejemplo de entrada
+==================
+an_surtidor 1
+carga 1 diesel 20
+carga 1 gasolina 30
+pon_en_espera v1 1
+pon_en_espera v2 1
+abandona v2
+vende 1 diesel 20
+
+Salida producida
+================
+an_surtidor 1=>OK
+carga 1 diesel 20=>OK
+carga 1 gasolina 30=>OK
+pon_en_espera v1 1=>OK
+pon_en_espera v2 1=>OK
+abandona v2=>OK
+vende 1 diesel 20=>VEHICULO:v1, QUEDAN: 0
+
+

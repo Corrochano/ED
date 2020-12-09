@@ -1,0 +1,12 @@
+- En el archivo 'main.cpp' está el programa de prueba.
+Este programa no debe modificarse. Así mismo, incluye
+un comentario sobre el formato de la entrada / salida,
+con un ejemplo de entrada, junto con la salida producida.
+
+- En el archivo 'GestionAdmisiones.h' deben añadirse los
+campos necesarios para soportar las estructuras de datos
+requeridas por el TAD, así como todas las clases y definiciones
+adicionales que se consideren oportunas.
+
+- En el archivo 'GestionAdmisiones.cpp' deben implementarse
+todos los métodos declarados en 'GestionAdmisiones.h'.
