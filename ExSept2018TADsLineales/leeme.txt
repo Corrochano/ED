@@ -1,0 +1,18 @@
+Material proporcionado
+======================
+main.cpp: El programa principal que realiza la prueba 
+de la operación implementada (no debe modificarse).
+Así mismo, incluye un comentario sobre el formato de la entrada / salida,
+con un ejemplo de entrada junto con la salida producida.
+
+Lista.h: Implementación del TAD Lista basada en nodos
+doblemente enlazados, que contiene la operación 'invertir'
+a implementar al principio de la clase.
+Aparte de implementar la operación, debe 
+indicarse y justificarse su complejidad, en el comentario
+que precede a la misma.
+Se han incorporado a esta versión del TAD dos operaciones 
+que son usadas en el main.cpp: imprime e imprime_inv. 
+No deben borrarse ni modificarse.
+DEBE USARSE ESTE ARCHIVO LISTA.H OBLIGATORIAMENTE.
+

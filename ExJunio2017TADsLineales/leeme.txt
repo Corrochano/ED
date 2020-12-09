@@ -1,0 +1,12 @@
+- En el archivo 'main.cpp' está el programa de prueba.
+Este programa no debe modificarse. Así mismo, incluye
+un comentario sobre el formato de la entrada / salida,
+con un ejemplo de entrada, junto con la salida producida.
+
+- El archivo 'cola.h' implementa el TAD Cola con una lista
+simplemente enlazada. A las operaciones vistas en clase se
+ha añadido una que devuelve la longitud (nº de elementos)
+de la cola.
+Debe completarse la implementación de la operación 'desplaza' 
+(aparece al comienzo)
+  

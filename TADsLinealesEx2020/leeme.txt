@@ -1,0 +1,73 @@
+Material proporcionado
+======================
+- main.cpp: El programa principal que realiza la prueba de
+la operación implementada. Este código NO debe modificarse. 
+- lista.h: La implementación del TAD lista basado en nodos
+doblemente enlazados vista en clase, extendida con métodos
+adicionales para imprimir la lista. Incluye también, al comienzo
+de la parte pública, el método 'cortaPorK', que es el que 
+hay que implementar. Debe, así mismo, determinarse justificadamente
+la complejidad de la operación en el comentario que precede al método.
+
+Formato de la entrada
+=====================
+Cada línea de la entrada contiene la especificación de una lista (lista de enteros) seguida del valor de K.
+La especificación de la lista comienza por el número de elementos de la lista seguido de los distintos elementos. 
+Así, la línea 7 0 1 2 3 4 5 6 2 especifica la lista de 7 elementos 0 1 2 3 4 5 6 y el último 2 es el valor de K.
+La entrada termina con una línea que contiene -1.
+ 
+Formato de la salida
+====================
+Por cada línea de la entrada se generan dos líneas en la salida.
+La primera línea contiene: 
+(i) la lista receptora después de haber realizado el corte (impresa de principio a fin); 
+(ii) # como separador;
+(iii) la lista receptora después de haber realizado el corte (impresa de fin a principio).
+La segunda línea contiene:
+(i) la lista destino después de incorporarle los elementos cortados (impresa de principio a fin);
+(ii) # como separador;
+(iii) la lista destino después de incorporarle los elementos cortados (impresa de fin a principio).
+
+Ejemplo: al procesar la entrada 7 0 1 2 3 4 5 6 2 se obtiene la salida
+3 4 5 6 #6 5 4 3
+0 1 2 #2 1 0
+
+Ejemplo de entrada
+==================
+0 10
+1 0 0
+1 0 10
+2 0 1 0
+2 0 1 1
+2 0 1 10
+5 0 1 2 3 4 0
+5 0 1 2 3 4 3
+5 0 1 2 3 4 4
+5 0 1 2 3 4 10
+7 0 1 2 3 4 5 6 2
+-1
+
+Salida asociada (2 líneas por cada línea de entrada)
+===============
+#
+#
+# 
+0 #0
+0 #0
+#
+1 #1
+0 #0
+#
+0 1 #1 0
+0 1 #1 0
+#
+1 2 3 4 #4 3 2 1
+0 #0
+4 #4
+0 1 2 3 #3 2 1 0
+#
+0 1 2 3 4 #4 3 2 1 0
+0 1 2 3 4 #4 3 2 1 0
+#
+3 4 5 6 #6 5 4 3
+0 1 2 #2 1 0

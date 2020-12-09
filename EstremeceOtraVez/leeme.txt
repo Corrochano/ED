@@ -1,0 +1,55 @@
+Material proporcionado
+======================
+- main.cpp: El programa principal que realiza la prueba de
+la operación implementada. Este código no debe modificarse. 
+- lista.h: La implementación del TAD lista basado en nodos
+doblemente enlazados vista en clase, extendida con dos métodos
+adicionales para imprimir la lista. Incluye también, al comienzo
+de la parte pública, el método 'estremece', que es el que 
+hay que implementar. Debe, así mismo, determinarse justificadamente
+la complejidad de la operación en el comentario que precede al método.
+
+Formato de la entrada
+=====================
+La entrada contiene la especificación de una lista por línea (lista de enteros).
+Cada línea comienza por el número de elementos, seguido de los distintos elementos 
+(ejemplo: 4 1 2 3 4 especifica la lista de 4 elementos 1 2 3 4)
+Se termina con una línea que contiene -1.
+ 
+Formato de la salida
+====================
+Cada línea contiene: (i) el "estremecimiento" de la lista de entrada; (ii) # como separador;
+(iii) el "estremecimiento" en orden inverso
+Ejemplo: al procesar 4 1 2 3 4 se escribe
+1 3 4 2 #2 4 3 1
+
+Ejemplos de entrada
+==================
+0
+1 0
+2 0 1
+3 0 1 2
+4 0 1 2 3
+5 0 1 2 3 4
+6 0 1 2 3 4 5
+7 0 1 2 3 4 5 6
+8 0 1 2 3 4 5 6 7
+9 0 1 2 3 4 5 6 7 8
+10 0 1 2 3 4 5 6 7 8 9
+-1
+
+
+Salidas asociadas
+=================
+#
+0 #0 
+0 1 #1 0 
+0 2 1 #1 2 0 
+0 2 3 1 #1 3 2 0 
+0 2 4 3 1 #1 3 4 2 0 
+0 2 4 5 3 1 #1 3 5 4 2 0 
+0 2 4 6 5 3 1 #1 3 5 6 4 2 0 
+0 2 4 6 7 5 3 1 #1 3 5 7 6 4 2 0 
+0 2 4 6 8 7 5 3 1 #1 3 5 7 8 6 4 2 0 
+0 2 4 6 8 9 7 5 3 1 #1 3 5 7 9 8 6 4 2 0 
+

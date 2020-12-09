@@ -1,0 +1,1 @@
+La solución constante va un poco mal se supone que pq no está pensado para ser constante.
