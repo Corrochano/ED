@@ -1,0 +1,123 @@
+Material proporcionado
+======================
+main.cpp: El programa principal que realiza la prueba del TAD
+a implementar. Dicho programa NO debe modificarse.
+
+GestionDeMatriculas.h: Definición de la parte pública de la clase
+"GestionDeMatriculas" y otras definiciones auxiliares. A esta definición 
+deben añadirse los detalles de representación, en la parte privada. Así mismo, 
+en este archivo podrán realizarse las definiciones auxiliares e inclusiones 
+de bibliotecas que se consideren oportunas.
+
+GestionDeMatriculas.cpp. Aquí deben implementarse las operaciones del TAD.
+Aparte de implementar los distintos métodos, deberá indicarse
+y justificarse su complejidad en los comentarios que los preceden.
+En este archivo puede implementarse también todos aquellos métodos 
+auxiliares que se consideren oportunos. 
+
+IMPORTANTE: Deben ponerse el nombre y apellidos así como el número del DNI/NIE
+al comienzo de los archivos GestionDeMatriculas.h y GestionDeMatriculas.cpp
+
+
+Formato de los archivos de entrada 
+==================================
+Cada línea contiene un comando para invocar una operación.
+Los comandos tienen el mismo nombre y propósito que las operaciones
+del TAD:
+
+registra_curso <curso> <plazas>
+registra_estudiante <estudiante> 
+registra_solicitud <estudiante> <curso>
+cancela_solicitud <estudiante>
+atiende_solicitud
+estudiantes_en_curso <curso>
+
+
+Formato de los archivos de salida
+=================================
+Para cada comando
+
+C
+
+se genera una línea en la salida con el siguiente formato
+
+<Resultado de ejecutar C>
+
+El resultado de ejecutar cada comando es como sigue:
+
+registra_curso: se imprime OK si todo ha ido bien; CURSO DUPLICADO en caso de que el curso ya esté registrado.
+registra_estudiante: se imprime OK si todo ha ido bien; ESTUDIANTE DUPLICADO en caso de que el estudiante esté ya registrado.
+registra_solicitud: se imprime OK si todo ha ido bien; ERROR SOLICITUD si el estudiante o el curso no están registrados.
+cancela_solicitud: se imprime OK si todo ha ido bien; ESTUDIANTE NO EXISTE en caso de que el estudiante no esté registrado.
+atiende_solicitud: se imprime MATRICULA DE <estudiante> EN <curso> ACEPTADA si la matrícula se ha realizado;
+                   MATRICULA DE <estudiante> EN <curso> NO ACEPTADA si la matrícula no se ha realizado;
+				   NO HAY SOLICITUDES en caso de que no haya solicitudes que atender. 
+estudiantes_en_curso: Se imprime la lista de estudiantes si todo ha ido bien; CURSO NO EXISTE en caso de que el curso
+                   no esté registrado 
+				  
+
+
+Ejemplo de entrada 1
+====================
+registra_curso ED 4
+registra_estudiante rose
+registra_estudiante peggy
+registra_estudiante bet
+registra_estudiante mark
+registra_estudiante bob
+registra_solicitud peggy ED
+registra_solicitud rose ED
+registra_solicitud mark ED
+registra_solicitud bet ED
+registra_solicitud bob ED
+cancela_solicitud bet
+atiende_solicitud
+registra_solicitud bet ED
+atiende_solicitud
+atiende_solicitud
+atiende_solicitud
+atiende_solicitud
+estudiantes_en_curso ED
+
+Salida producida por el ejemplo 1
+=================================
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+MATRICULA DE peggy EN ED ACEPTADA
+OK
+MATRICULA DE rose EN ED ACEPTADA
+MATRICULA DE mark EN ED ACEPTADA
+MATRICULA DE bob EN ED ACEPTADA
+MATRICULA DE bet EN ED NO ACEPTADA
+[estudiante: rose, num matricula:2][estudiante: peggy, num matricula:1][estudiante: mark, num matricula:3][estudiante: bob, num matricula:4]
+
+
+Ejemplo de entrada 2
+====================
+registra_curso ED 4
+registra_estudiante rose
+registra_solicitud rose ED
+atiende_solicitud
+estudiantes_en_curso ED
+registra_solicitud rose ED
+atiende_solicitud
+
+Salida producida por el ejemplo 2
+=================================
+OK
+OK
+OK
+MATRICULA DE rose EN ED ACEPTADA
+[estudiante: rose, num matricula:1]
+OK
+NO HAY SOLICITUDES
