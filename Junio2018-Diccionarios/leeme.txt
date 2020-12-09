@@ -1,0 +1,59 @@
+Material proporcionado
+======================
+main.cpp: El programa principal que realiza la prueba del TAD
+a implementar. Dicho programa no debe modificarse
+
+ParqueNatural.h: Definición de la parte publica de la clase
+ParqueNatural. A esta definición debe añadirse los detalles
+de representación, en la parte privada. Así mismo, en este
+archivo podrá realizarse las definiciones auxiliares que
+se consideren oportuno.
+
+ParqueNatural.cpp. Implementación de las operaciones del TAD.
+Aparte de implementar los distintos métodos, deberá indicarse
+y justificarse su complejidad en los comentarios que los preceden.
+En este archivo puede implementarse también todos aquellos métodos 
+auxiliares que se consideren oportunos. 
+
+
+Casos de prueba:
+- Entrada: ejemplos.in
+- Salida: ejemplos.out
+
+
+Formato de los archivos de entrada 
+==================================
+Cada línea contiene un comando para invocar una operación.
+Los comandos tienen el mismo nombre y propósito que las operaciones
+del TAD:
+
+an_ecosistema <nombre ecosistema>
+an_ejemplares <nombre ecosistema> <nombre especie> <numero ejemplares>
+lista_especies_ecosistema <nombre ecosistema>  <numero especies a listar>
+numero_ejemplares_en_ecosistema <nombre ecosistema> <nombre especie>
+lista_especies_parque
+numero_ejemplares_en_parque <nombre especie>
+
+
+Formato de los archivos de salida
+=================================
+Para cada comando
+
+C
+
+se genera una línea en la salida con el siguiente formato
+
+C => <Resultado de ejecutar C>
+
+El resultado de ejecutar cada comando es como sigue:
+
+an_ecosistema: se imprime OK si todo ha ido bien; ECOSISTEMA_DUPLICADO si el ecosistema dado ya existe.
+an_ejemplares: se imprime OK si todo ha ido bien; NO_EXISTE_ECOSISTEMA si el ecosistema dado no existe.
+lista_especcies_ecosistema: se lista las especies requeridas si el ecosistema existe; si no existe, 
+                            se muestra NO_EXISTE_ECOSISTEMA
+numero_ejemplares_en_ecosistema: se lista el número de ejemplares si el ecosistema existe; si no,
+                            se muestra NO_EXISTE_ECOSISTEMA
+lista_especies_parque: lista de las especies del parque producida por la operación homónima
+numero_ejemplares_en_parque: número de ejemplares de la especie indicada que viven en el parque. 
+
+En los archivos proporcionados hay ejemplos de cada uno de los comandos decritos. 
